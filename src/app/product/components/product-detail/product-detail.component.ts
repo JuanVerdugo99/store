@@ -35,4 +35,15 @@ export class ProductDetailComponent implements OnInit {
     })
   }
 
+  createProduct() {
+    const newProduct: Product = {
+      id: '222',
+      title: 'nuevo desde angular'
+    };
+    this.productsService.createProduct(newProduct)
+    .subscribe(product => {
+      console.log(product)
+    })
+  }
+
 }
