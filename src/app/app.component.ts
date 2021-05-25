@@ -1,10 +1,33 @@
 import { Component } from '@angular/core';
 
+import { Product } from './product.model';
+
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'platzi-store';
+  
+  // aSport = '🏈';
+  // aSport = '';
+  // rSport = '';
+  // sports = ['🏋🏼','⛸','🏄🏼‍♂️','🏌🏼‍♂️','⚽','⚾','🏀'];
+  // error = false;
+  // addSport(sport: string){
+  //   this.sports.push(sport);
+  //   this.aSport = '';
+  // }
+  // removeSport(sport: string){
+  //   let index = this.sports.indexOf(sport);
+  //   this.rSport = '';
+  //   if(index === -1){
+  //     this.error = true;
+  //   } else {
+  //     this.error = false;
+  //     this.sports.splice(index, 1);
+  //   }
+  // }
+  
+  
 }

@@ -1,0 +1,56 @@
+<!-- <input type="text" [(ngModel)]="title"> <br> -->
+<!-- STRING INTERPOLATION -->
+<p>{{ title }} is working</p>
+
+<!-- <input type="text" [(ngModel)]="power">
+{{ power | exponential}} -->
+
+<!-- NG IF -->
+<!-- <div *ngIf="title == 'Jon'; then store else welcome">
+  este es un div
+</div> -->
+
+<!-- NG SWITCH -->
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'Jon'">Este es Jon</p>
+  <p *ngSwitchCase="'Jasive'">Esta es Jasive</p>
+  <p *ngSwitchCase="'Coco'">Este es coco</p>
+  <p *ngSwitchDefault>No hay match</p>
+</div>
+
+<!-- <ng-template #store>
+  Mostrando contenido
+</ng-template>
+
+<ng-template #welcome>
+  Bienvenido
+</ng-template> -->
+
+<!-- NG FOR -->
+<br>
+<!-- <button (click)="addItem()">Add item</button>
+<ul>
+  <li *ngIf="items.length == 0" style="list-style: none;">La Lista está vacia</li>
+  <li *ngFor="let name of items; index as i " style="list-style: none;">
+    {{i + 1}} - {{name}}
+    <button (click)="removeItem(i)">delete</button> <hr>
+  </li>
+</ul> -->
+
+
+
+<!-- <section>
+  <h3>Coloca aquí el emoji del deporte que quieras agregar:</h3>
+  <input type="text" [(ngModel)]="aSport">
+  <button (click)="addSport(aSport)">Agregar Deporte</button>
+
+  <ul>
+    <li *ngIf="sports.length === 0">Todos los deportes se eliminaron</li>
+    <li *ngFor="let sport of sports">{{sport}}</li>
+  </ul>
+
+  <h5>Quieres Eliminar un deporte? Colocalo aquí:</h5>
+  <input type="text" [(ngModel)]="rSport">
+  <button (click)="removeSport(rSport)">Eliminar deporte</button>
+  <p *ngIf="error">Elige un deporte que existe dentro de la lista</p>
+</section> -->
