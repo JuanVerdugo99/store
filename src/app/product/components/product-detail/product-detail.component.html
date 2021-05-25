@@ -1,7 +1,6 @@
-<!-- <div *ngIf="product !== null;"> -->
+<div *ngIf="product">
 <!-- <div *ngIf="product !== null; else notfound"> -->
-
-    <!-- <div>
+    <div>
         <img [src]="product.image" alt="">
     </div>
     <div>
@@ -10,8 +9,8 @@
             <li>Precio: {{ product.price | currency}}</li>
         </ul>
         <p>{{ product.description }}</p>
-    </div> -->
-<!-- </div> -->
+    </div>
+</div>
 
 <!-- <ng-template #notfound>
     <app-page-not-found></app-page-not-found>

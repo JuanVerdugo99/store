@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Product } from '../../../product.model';
 
+import {environment} from '../../../../environments/environment';
+ 
 @Injectable({
   providedIn: 'root'
 })
@@ -53,7 +55,7 @@ export class ProductsService {
   //   }
   // ];
 
-  URL_API: string = 'http://platzi-store.herokuapp.com/products';
+  // URL_API: string = 'http://platzi-store.herokuapp.com/products';
 
   constructor(
     private http: HttpClient
@@ -64,7 +66,7 @@ export class ProductsService {
   // }
 
   getAllProducts(){
-    return this.http.get<Product[]>(this.URL_API);
+    return this.http.get<Product[]>(environment.url_api);
   }
 
   // getProduct(id: string){
@@ -72,7 +74,7 @@ export class ProductsService {
   // }
 
   getProduct(id: string){
-    return this.http.get<Product[]>(`${this.URL_API}/${id}`);
+    return this.http.get<Product>(`${environment.url_api}/${id}`);
   }
 
 }
